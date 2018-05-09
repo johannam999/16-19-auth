@@ -3,15 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1bd80f8f-08a4-4b65-854a-b3da8f54f9cd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__test__/label-router.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/label-router.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__test__/lib/label-mock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/lib/label-mock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__test__/lib/parcel-mock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/lib/parcel-mock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__test__/parcel-router.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/parcel-router.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/auth-router.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/auth-router.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/lib/account-mock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/lib/account-mock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/lib/test.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/lib/test.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/error-middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/error-middleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/label-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/label-model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/parcel-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/parcel-model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/route/label-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/label-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/route/parcel-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/parcel-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/auth-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/auth-router.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,85 +22,78 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="label-router.test.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/__test__/label-router.test.js">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="auth-router.test.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/__test__/auth-router.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+            <state relative-caret-position="119">
+              <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parcel-mock.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/__test__/lib/parcel-mock.js">
+      <file leaf-file-name="test.env.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/__test__/lib/test.env.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state relative-caret-position="15">
+              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parcel-router.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/__test__/parcel-router.test.js">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+              <folding>
+                <element signature="e#15#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile-router.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/__test__/profile-router.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="50" column="8" selection-start-line="39" selection-start-column="5" selection-end-line="50" selection-end-column="8" />
+              <folding>
+                <element signature="e#15#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth-router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/route/auth-router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+              <folding>
+                <element signature="e#116#152#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile-router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/route/profile-router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-45" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basic-auth-middleware.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/basic-auth-middleware.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+              <folding>
+                <element signature="e#15#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parcel-model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/parcel-model.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="error-middleware.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/error-middleware.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jasmine_async.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/jest-jasmine2/build/jasmine_async.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/superagent/lib/node/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="688" column="11" selection-start-line="688" selection-start-column="11" selection-end-line="688" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="label-router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/route/label-router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="label-model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/label-model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="async_hooks.js" pinned="false" current-in-tab="false">
-        <entry file="mock://internal/async_hooks.js">
-          <provider selected="true" editor-type-id="vmFileEditor" />
         </entry>
       </file>
     </leaf>
@@ -114,6 +105,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/__test__/label-router.test.js" />
+        <option value="$PROJECT_DIR$/src/__test__/lib/test.env.js" />
+        <option value="$PROJECT_DIR$/src/lib/basic-auth-middleware.js" />
+        <option value="$PROJECT_DIR$/src/route/auth-router.js" />
+        <option value="$PROJECT_DIR$/src/__test__/profile-router.test.js" />
+        <option value="$PROJECT_DIR$/src/__test__/auth-router.test.js" />
       </list>
     </option>
   </component>
@@ -133,11 +129,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="48" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="97" />
+    <option name="y" value="160" />
     <option name="width" value="1400" />
-    <option name="height" value="807" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -148,35 +144,36 @@
         <subPane>
           <expand>
             <path>
-              <item name="13-14-relationship-mapping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13-14-relationship-mapping" type="462c0819:PsiDirectoryNode" />
+              <item name="16-19-auth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="16-19-auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="13-14-relationship-mapping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13-14-relationship-mapping" type="462c0819:PsiDirectoryNode" />
+              <item name="16-19-auth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="16-19-auth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="13-14-relationship-mapping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13-14-relationship-mapping" type="462c0819:PsiDirectoryNode" />
+              <item name="16-19-auth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="16-19-auth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="__test__" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="13-14-relationship-mapping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13-14-relationship-mapping" type="462c0819:PsiDirectoryNode" />
+              <item name="16-19-auth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="16-19-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="__test__" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="16-19-auth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="16-19-auth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="13-14-relationship-mapping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13-14-relationship-mapping" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="13-14-relationship-mapping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="13-14-relationship-mapping" type="462c0819:PsiDirectoryNode" />
+              <item name="16-19-auth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="16-19-auth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="route" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -212,7 +209,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest./api/labels.POST /api/labels.409 due to duplicate firstName">
+  <component name="RunManager" selected="Jest. AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token">
+    <configuration name=" AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/src/__test__" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__test__/auth-router.test.js" />
+      <test-names>
+        <test-name value=" AUTH ROUTER" />
+        <test-name value="GET /login" />
+        <test-name value="GET /login should get a 200 status code and a token" />
+      </test-names>
+    </configuration>
     <configuration name="/api/labels.POST /api/labels" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -238,12 +248,24 @@
         <test-name value="409 due to duplicate firstName" />
       </test-names>
     </configuration>
+    <configuration name="auth-router.test.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/src/__test__" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/__test__/auth-router.test.js" />
+    </configuration>
     <list>
       <item itemvalue="Jest./api/labels.POST /api/labels.409 due to duplicate firstName" />
       <item itemvalue="Jest./api/labels.POST /api/labels" />
+      <item itemvalue="Jest.auth-router.test.js" />
+      <item itemvalue="Jest. AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest. AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" />
+        <item itemvalue="Jest.auth-router.test.js" />
         <item itemvalue="Jest./api/labels.POST /api/labels.409 due to duplicate firstName" />
         <item itemvalue="Jest./api/labels.POST /api/labels" />
       </list>
@@ -260,66 +282,67 @@
       <option name="presentableId" value="Default" />
       <updated>1525665316806</updated>
       <workItem from="1525665318238" duration="4617000" />
+      <workItem from="1525820600264" duration="4566000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 21h 34m 35s.xml">
-      <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 21h 37m 43s.xml">
-      <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 21h 45m 00s.xml">
-      <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 21h 45m 06s.xml">
-      <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 21h 45m 58s.xml">
-      <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 21h 56m 56s.xml">
-      <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 21h 57m 40s.xml">
-      <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 21h 59m 02s.xml">
-      <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
     <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 22h 00m 20s.xml">
       <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
     <history-entry file="_api_labels_POST__api_labels_409_due_to_duplicate_firstName - 2018.05.06 at 22h 01m 05s.xml">
       <configuration name="/api/labels.POST /api/labels.409 due to duplicate firstName" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
+    <history-entry file="auth-router_test_js - 2018.05.08 at 16h 07m 54s.xml">
+      <configuration name="auth-router.test.js" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="_AUTH_ROUTER_GET__login_GET__login_should_get_a_200_status_code_and_a_token - 2018.05.08 at 16h 08m 50s.xml">
+      <configuration name=" AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="_AUTH_ROUTER_GET__login_GET__login_should_get_a_200_status_code_and_a_token - 2018.05.08 at 16h 13m 32s.xml">
+      <configuration name=" AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="_AUTH_ROUTER_GET__login_GET__login_should_get_a_200_status_code_and_a_token - 2018.05.08 at 16h 13m 38s.xml">
+      <configuration name=" AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="_AUTH_ROUTER_GET__login_GET__login_should_get_a_200_status_code_and_a_token - 2018.05.08 at 16h 13m 42s.xml">
+      <configuration name=" AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="_AUTH_ROUTER_GET__login_GET__login_should_get_a_200_status_code_and_a_token - 2018.05.08 at 16h 15m 43s.xml">
+      <configuration name=" AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="_AUTH_ROUTER_GET__login_GET__login_should_get_a_200_status_code_and_a_token - 2018.05.08 at 16h 17m 27s.xml">
+      <configuration name=" AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="_AUTH_ROUTER_GET__login_GET__login_should_get_a_200_status_code_and_a_token - 2018.05.08 at 16h 17m 31s.xml">
+      <configuration name=" AUTH ROUTER.GET /login.GET /login should get a 200 status code and a token" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4617000" />
+    <option name="totallyTimeSpent" value="9183000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="23" width="1400" height="807" extended-state="1" />
+    <frame x="97" y="160" width="1400" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3292517" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info id="npm" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32831737" />
+      <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2946794" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.43939394" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,29 +357,86 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/__test__/label-router.test.js</url>
           <line>54</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/route/label-router.js</url>
           <line>16</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/lib/error-middleware.js</url>
-          <line>9</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/__test__/label-router.test.js</url>
           <line>49</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/__test__/auth-router.test.js</url>
+          <line>61</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/__test__/auth-router.test.js</url>
+          <line>63</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/__test__/auth-router.test.js</url>
+          <line>65</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/__test__/auth-router.test.js</url>
+          <line>67</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/__test__/auth-router.test.js</url>
+          <line>68</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/route/auth-router.js</url>
+          <line>28</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/route/auth-router.js</url>
+          <line>29</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/route/auth-router.js</url>
+          <line>31</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/route/auth-router.js</url>
+          <line>33</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/route/auth-router.js</url>
+          <line>34</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/route/auth-router.js</url>
+          <line>36</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="30" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -379,6 +459,32 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/lib/error-middleware.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jest-jasmine2/build/jasmine_async.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/superagent/lib/node/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10320">
+          <caret line="688" column="11" selection-start-line="688" selection-start-column="11" selection-end-line="688" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/route/parcel-router.js" />
+    <entry file="file://$PROJECT_DIR$/src/lib/error-middleware.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/label-model.js" />
+    <entry file="file://$PROJECT_DIR$/src/__test__/parcel-router.test.js" />
+    <entry file="file://$PROJECT_DIR$/src/__test__/lib/parcel-mock.js" />
+    <entry file="file://$PROJECT_DIR$/src/route/label-router.js" />
+    <entry file="file://$PROJECT_DIR$/src/__test__/label-router.test.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/jest-jasmine2/build/jasmine_async.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -388,56 +494,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/superagent/lib/node/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="670">
           <caret line="688" column="11" selection-start-line="688" selection-start-column="11" selection-end-line="688" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/route/parcel-router.js">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/error-middleware.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/parcel-model.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/label-model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        <state relative-caret-position="30">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__test__/parcel-router.test.js">
+    <entry file="file://$PROJECT_DIR$/src/lib/basic-auth-middleware.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding>
+            <element signature="e#15#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__test__/lib/parcel-mock.js">
+    <entry file="file://$PROJECT_DIR$/src/__test__/lib/test.env.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="15">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/route/label-router.js">
+    <entry file="file://$PROJECT_DIR$/src/lib/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="525">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#15#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__test__/label-router.test.js">
+    <entry file="file://$PROJECT_DIR$/src/route/auth-router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+        <state relative-caret-position="207">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding>
+            <element signature="e#116#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/route/profile-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__test__/profile-router.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="50" column="8" selection-start-line="39" selection-start-column="5" selection-end-line="50" selection-end-column="8" />
+          <folding>
+            <element signature="e#15#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__test__/auth-router.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
         </state>
       </provider>
     </entry>

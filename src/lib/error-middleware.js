@@ -29,7 +29,7 @@ export default(error, request, response, next) => { // this is express conventio
     logger.log(logger.INFO, ' Responding with a 401 code');// this is not a server problem its their problem
     return response.sendStatus(401);
   }
-  logger.log(logger.ERROR, 'Responded with a 500 error code');
+  logger.log(logger.ERROR, 'Responded with a 500 error code'); // the only test not related to mongo errors
   logger.log(logger.ERROR, error);
   return response.sendStatus(500);
 };
