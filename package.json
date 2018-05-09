@@ -1,6 +1,7 @@
 {
   "scripts": {
     "test": "jest --coverage --forceExit --runInBand",
+    "testJ": "jest --coverage",
     "watchAll": "--watchAll ",
     "dbOn": "mkdir -p ./db && mongod --dbpath ./db",
     "dboff": "killall mongod"
