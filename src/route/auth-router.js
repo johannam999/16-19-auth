@@ -1,9 +1,13 @@
 'use strict';
 
-import { Router } from 'express'; // interview keywords : de-structuring and module
+
 import { json } from 'body-parser';
+import { Router } from 'express'; //  de-structuring and module
+import HttpError from 'http-errors';
 import Account from '../model/account';
+import basicAuthMiddleware from '../lib/basic-auth-middleware';
 import logger from '../lib/logger';
+
 
 const jsonParser = json();
 const authRouter = new Router();
@@ -17,6 +21,18 @@ authRouter.post('/signup', jsonParser, (request, response, next) => {
     })
     .then((token) => {
       logger.log(logger.INFO, 'AUTH - returning 200 code and a token');
+      return response.json({ token });
+    })
+    .catch(next);
+});
+authRouter.get('/login', basicAuthMiddleware, (request, response, next) => {
+  /* basicAuthMiddleware(this is the content from basic-auth.middleware */
+  if (!request.account) {
+    return next(new HttpError(400, 'AUTH -invalid request'));
+  }
+  return request.account.pCreateToken() // authenticating
+    .then((token) => {
+      logger.log(logger.INFO, 'LOGIN - responding with 200 status and a token');
       return response.json({ token });
     })
     .catch(next);
