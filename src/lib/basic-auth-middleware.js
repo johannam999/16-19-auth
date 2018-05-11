@@ -6,18 +6,18 @@ import Account from '../model/account';
 
 // request, response, next are required arguments for middleware
 export default(request, response, next) => {
-  if (!request.headers.authorization) {
+  // this is an object
+  if (!request.headers.authorization) { // if header doesnt have authorization field,
     return next(new HttpError(400, 'AUTH - invalid request'));
   }
-  const base64AuthHeader = request.headers.authorization.split('Basic ')[1]; // base 64 information bc we want only the string without word base
+  const base64AuthHeader = request.headers.authorization.split('Basic ')[1]; 
   if (!base64AuthHeader) {
     return next(new HttpError(400, 'Auth - invalid request'));
   }
-  // convert base64 to normal string, we get username: password
+  
   const stringAuthHeader = Buffer.from(base64AuthHeader, 'base64').toString();
-  // const usernamePassword = stringAuthHeader.split(':');
-  // u can do the same with ES6:, this is destructuring array
-  const [username, password] = stringAuthHeader.split(':');
+
+  const [username, password] = stringAuthHeader.split(':'); // ;
   if (!username || !password) {
     return next(new HttpError(400, 'Auth - invalid request'));
   }
@@ -27,11 +27,16 @@ export default(request, response, next) => {
       if (!account) {
         return next(new HttpError(400, 'Auth - invalid request'));
       }
-      return account.pVerifyPassword(password);
+      return account.pVerifyPassword(password); /*
+ goes to account model, rehash the password
+         and compare to hash
+*/
     })
     .then((account) => { // here i have correct account
       request.account = account; // mutate the object and add property account on it
-      return next();
+      // we dont need to return account bc its attached to request.body
+      return next(); // next will go to a auth-router.js => authrouter.get
+      // basicAuthMiddleware(this is what we did here)
     })
     .catch(next);
 };

@@ -2,7 +2,7 @@
 'use strict';
 
 import { json } from 'body-parser';
-import { Router } from 'express'; // Vinicio - interview keywords : de-structuring and module
+import { Router } from 'express'; 
 import HttpError from 'http-errors';
 import Profile from '../model/profile';
 import bearerAuthMiddleware from '../lib/bearer-auth-middleware';
@@ -17,7 +17,7 @@ profileRouter.post('/profiles', bearerAuthMiddleware, jsonParser, (request, resp
   }
 
   return new Profile({
-    ...request.body, // destructuring the object it all the properties needed
+    ...request.body, 
     account: request.account._id,
   })
     .save()

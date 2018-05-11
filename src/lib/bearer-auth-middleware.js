@@ -1,3 +1,5 @@
+'use strict';
+
 import HttpError from 'http-errors';
 import jsonWebToken from 'jsonwebtoken';
 import Account from '../model/account';
@@ -23,12 +25,13 @@ const promisify = callbackStyleFunction => (...args) => {
   // if inside function we mean array values
   
 export default (request, response, next) => {
+  console.log('in bearer auth');
   if (!request.headers.authorization) {
     return next(new HttpError(400, 'AUTH - invalid request'));
   }
   const token = request.headers.authorization.split('Bearer ')[1];
   if (!token) {
-    return next(new HttpError(400, 'AUTH - invalid request'));// sending naked token
+    return next(new HttpError(401, 'AUTH - bad token'));// sending naked token
   }
   return promisify(jsonWebToken.verify)(token, process.env.PICS_SECRET_PASS) 
   // here is token and secret, token and process... are callback(... args)
@@ -36,9 +39,11 @@ export default (request, response, next) => {
       return Promise.reject(new HttpError(400, `AUTH - jsonwebtoken Error ${error}`));// we got incorrect token
     }) // if theres a problem in the promisify we can have catch
     .then((decryptedToken) => {
+      console.log('in .then decryptedToken');
       return Account.findOne({ tokenSeed: decryptedToken.tokenSeed }); // we are getting token seed
     })// finding token seed
     .then((account) => {
+      console.log('in .then account');
       if (!account) {
         return next(new HttpError(400, 'AUTH - invalid request'));
       }

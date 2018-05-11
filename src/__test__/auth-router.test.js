@@ -61,7 +61,10 @@ describe(' AUTH ROUTER', () => {
       return pCreateAccountMock()
         .then((mock) => {
           return superagent.get(`${apiURL}/login`)
-            .auth(mock.request.username, mock.request.password); // this line is important
+            .auth(mock.request.username, mock.request.password); /*
+ its a client side, this line will
+             send request with base64 encode
+*/
         })
         .then((response) => {
           // when I login, I get a 200 status code and a token
