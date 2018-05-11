@@ -4,14 +4,11 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';// to generate hash
 import crypto from 'crypto';// to generate random data
 import jsonWebToken from 'jsonwebtoken';
+import HttpError from 'http-errors';
 
 
-/* to make it more secure we use hash 8 times and salt, 
-bc to hack they need to guess this on the top of username
- and password amount of times to hash in production you want 64 */
 const HASH_ROUNDS = 8;  
-// _ is a space, caps means its a constant and we dont want 
-// to change it in the future, ti applies mostly to strings and numbers
+
 const TOKEN_SEED_LENGTH = 128; // how long the token will be, random number of bytes
 
 const accountSchema = mongoose.Schema({

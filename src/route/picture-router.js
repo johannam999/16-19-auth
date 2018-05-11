@@ -6,7 +6,7 @@ import HttpError from 'http-errors';
 import bearerAuthMiddleWare from '../lib/bearer-auth-middleware';
 import Picture from '../model/picture';
 import { s3Upload, s3Remove } from '../lib/s3';
-import { pCreatePictureMock } from '../__test__/lib/picture-mock';
+// import { pCreatePictureMock } from '../__test__/lib/picture-mock';
 
 const multerUpload = multer({ dest: `${__dirname}/../temp` });
  

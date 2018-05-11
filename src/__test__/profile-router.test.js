@@ -4,7 +4,7 @@ import superagent from 'superagent';
 import { startServer, stopServer } from '../lib/server';
 import { pCreateAccountMock } from './lib/account-mock';
 import { pRemoveProfileMock } from './lib/profile-mock';
-import faker from 'faker';
+
 
 
 const apiURL = `http://localhost:${process.env.PORT}`;

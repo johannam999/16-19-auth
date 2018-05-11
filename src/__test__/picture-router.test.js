@@ -1,9 +1,10 @@
 'use strict';
 
-import faker from 'faker';
+
 import superagent from 'superagent';
 import { startServer, stopServer } from '../lib/server';
 import { pCreatePictureMock, pRemovePictureMock } from './lib/picture-mock';
+import logger from '../lib/logger';
 
 const apiURL = `http://localhost:${process.env.PORT}`;
 
@@ -32,20 +33,15 @@ describe('TESTING ROUTES at /pictures', () => {
           expect(response.status).toEqual(200);
         });
     });
-    test('should return 401 when no token given', () => {
-      const toTest = {
-        pictureTitle: faker.lorem.words(5),
-        url: faker.random.image(),
-      }
-        .then((toTest) => {
+    test('POST /pictures should return a 400 status code for bad request', () => {
+      return pCreatePictureMock()
+        .then(() => {
           return superagent.post(`${apiURL}/pictures`)
-            .set('Authorization', `Bearer ${token}`)
-            .send(toTest);
+            .send({});
         })
         .then(Promise.reject)
-
-        .catch((response) => {
-          expect(response.status).toEqual(400);
+        .catch((err) => {
+          expect(err.status).toEqual(400);
         });
     });
 
@@ -57,7 +53,7 @@ describe('TESTING ROUTES at /pictures', () => {
             .send({});
         })
         .then(Promise.reject)
-      
+
         .catch((response) => { 
           expect(response.status).toEqual(401);
         });
@@ -65,20 +61,42 @@ describe('TESTING ROUTES at /pictures', () => {
   });
   describe('GET 200 for successful get to /pictures/:id', () => {
     test(' should return 200', () => {
-      let testPic = null;
+      let picTest = null;
       return pCreatePictureMock()
-        .then((mockPic) => {
-          console.log(mockPic.accountMock.account._id);
-          testPic = mockPic.accountMock.account._id;
-          const { token } = mockPic.accountMock;
-          return superagent.get(`${apiURL}/pictures/${mockPic.accountMock._id}`)
-            .set('Authorization', `Bearer ${token}`)
-            .attach('picture', `${__dirname}/asset/whiteboard.jpg`)
-            .then((response) => {
-              console.log(response.body._id);
-              expect(response.status).toEqual(200);
-              // expect(response.body._id).toEqual(testPic._id.toString())
-            });
+        .then((picture) => {
+          picTest = picture;
+          return superagent.get(`${apiURL}/pictures/${picture.picture}`)
+            .set('Authorization', `Bearer ${picture.accountMock.token}`);
+        })
+        .then((response) => {
+          expect(response.status).toEqual(200);
+          expect(response.body.token).toBeTruthy();
+        })
+        .catch((err) => {
+          logger.log(logger.ERROR, err);
+        });
+    });
+
+    test('GET /pictures should return a 400 status code for no id', () => {
+      return pCreatePictureMock()
+        .then(() => {
+          return superagent.post(`${apiURL}/pictures/`);
+        })
+        .then(Promise.reject)
+        .catch((err) => {
+          expect(err.status).toEqual(400);
+        });
+    });
+
+    test('GET /pictures should return a 400 status code for missing token', () => {
+      return pCreatePictureMock()
+        .then(() => {
+          return superagent.post(`${apiURL}/pictures/:id`)
+            .set('Authorization', 'Bearer ');
+        })
+        .then(Promise.reject)
+        .catch((err) => {
+          expect(err.status).toEqual(404);
         });
     });
   });

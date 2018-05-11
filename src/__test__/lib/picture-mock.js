@@ -1,7 +1,7 @@
 'use strict';
 
 import faker from 'faker';
-import { pCreateAccountMock, pRemoveAccountMock } from '../lib/account-mock';
+import { pCreateAccountMock } from '../lib/account-mock';
 import Picture from '../../model/picture';
 import Account from '../../model/account'; // we cant create a pic without account
 
@@ -26,4 +26,4 @@ const pCreatePictureMock = () => {
 
 const pRemovePictureMock = () => Promise.all([Account.remove({}), Picture.remove({})]);
 
-export { pCreatePictureMock, pRemovePictureMock };
+export { pCreatePictureMock };
