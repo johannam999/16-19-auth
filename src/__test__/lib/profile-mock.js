@@ -14,8 +14,8 @@ const pCreateProfileMock = () => {
       return new Profile({
         zipCode: faker.lorem.words(8),
         picture: faker.random.image(), // this gives the address to pic
-        nickname: faker.name.nickname(15),
-        category: faker.name.category(),
+        nickname: faker.lorem.words(5),
+        category: faker.lorem.words(),
         account: accountSetMock.account._id,
       }).save();
     })

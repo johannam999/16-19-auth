@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';// to generate hash
 import crypto from 'crypto';// to generate random data
 import jsonWebToken from 'jsonwebtoken';
+import HttpError from 'http-errors';
 
 
 /* to make it more secure we use hash 8 times and salt, 

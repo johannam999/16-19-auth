@@ -80,17 +80,11 @@ describe(' AUTH ROUTER', () => {
         });
     });
   });
+  test(' 404 if wrong login', () => {
+    return superagent.get(`${apiURL}/wrongLogin`)
+      .then(Promise.reject)
+      .catch((err) => {
+        expect(err.status).toEqual(404);
+      });
+  });
 });
-
-//   test(' 404 if wrong password', () => {
-//     return superagent.get(`${apiURL}/login`)
-//       .send({
-//         username: faker.internet.userName(),
-//         password: 'bubu',
-//       })
-//       .then(Promise.reject)
-//       .catch((err) => {
-//         expect(err.status).toEqual(404);
-//       });
-//   });
-// });

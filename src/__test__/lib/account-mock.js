@@ -3,6 +3,7 @@
 import faker from 'faker';
 import Account from '../../model/account';
 
+
 const pCreateAccountMock = () => {
   const mock = {};
   mock.request = { 
@@ -24,7 +25,7 @@ const pCreateAccountMock = () => {
     .then((account) => { // here we get account from the top
       mock.account = account;
       return mock;
-    });// this continues to the auth-router.test.js POST . then ((acccount) => {
+    });// this continues to the auth-router.test.js POST . then ((account) => {
   //  const mockAccount...
   // })
 };
