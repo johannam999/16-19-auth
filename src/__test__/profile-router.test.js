@@ -22,9 +22,9 @@ describe('POST /profiles', () => {
         return superagent.post(`${apiURL}/profiles`)
           .set('Authorization', `Bearer ${accountSetMock.token}`)
           .send({
-            zipCode: '981094',
-            category: 'birds',
             nickname: 'joanna',
+            zipCode: '981094',
+            category: 'birds',   
           });
       })
     // we are testing accountSetMock but its only available 
@@ -37,7 +37,7 @@ describe('POST /profiles', () => {
         expect(response.body.category).toEqual('birds');
       });
   });
-  test('POST /profiles returns 404 if empty object', () => {
+  test('POST /profiles returns 404 if wrong id', () => {
     return pCreateAccountMock() 
       .then((accountSetMock) => {
         return superagent.post(`${apiURL}/profiles/wrongid`)
@@ -45,7 +45,7 @@ describe('POST /profiles', () => {
           .send({
             zipCode: faker.lorem.words(8),
             picture: faker.random.image(),
-            nickname: faker.name.nickname(15),
+            nickname: faker.lorem.words(15),
           });
       })
       .then(Promise.reject)
@@ -53,14 +53,30 @@ describe('POST /profiles', () => {
         expect(err.status).toEqual(404);
       });
   });
+  test('POST /profiles should show 400 if missing  token', () => {
+    return pCreateAccountMock() 
+      .then(() => {
+        return superagent.post(`${apiURL}/profiles`)
+          .set('Authorization', 'Bearer ')
+          .send({
+            zipCode: faker.lorem.words(8),
+            picture: faker.random.image(),
+            nickname: faker.lorem.words(15),
+          });
+      })
+      .then(Promise.reject)
+      .catch((err) => {
+        expect(err.status).toEqual(400);
+      });
+  });
+
 
   test('GET /profiles/:id should respond with 200 if no errors', () => {
     let profileTest = null;
     return pCreateProfileMock()
-      .then((profile) => {
+      .then((profile) => {  
         profileTest = profile;
-        return superagent.get(`${apiURL}/profiles/${profile.profile._id}`)
-        .set('Authorization', `Bearer ${accountSetMock.token}`);
+        return superagent.get(`${apiURL}/profiles/${profile.profile._id}`);
       })
       .then((response) => {
         expect(response.body.nickname).toEqual(profileTest.profile.nickname);
@@ -69,25 +85,9 @@ describe('POST /profiles', () => {
         expect(response.body._id).toBeTruthy();
       });
   });
-  test('GET /profiles returns 404 if bad id ', () => {
-    return pCreateAccountMock() 
-      .then((accountSetMock) => {
-        return superagent.post(`${apiURL}/profiles/wrongId`)
-          .set('Authorization', `Bearer ${accountSetMock.token}`);
-      })
-      .then(Promise.reject)
-      .catch((err) => {
-        expect(err.status).toEqual(404);
-      });
-  });
+
   test('GET /profiles returns 404 if bad request ', () => {
-   
-    return pCreateAccountMock() 
-      .then(() => {
-        mockTest = accountSetMock;
-        return superagent.get(`${apiURL}/profiles/`)
-          .set('Authorization', `Bearer `);
-      })
+    return superagent.get(`${apiURL}/profiles/`)
       .then(Promise.reject)
       .catch((err) => {
         expect(err.status).toEqual(404);

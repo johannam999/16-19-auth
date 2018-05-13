@@ -2,8 +2,7 @@
 
 import logger from './logger';
 
-export default(error, request, response, next) => { // this is express convention
-  // eslint-disable-line no-unused-vars
+export default(error, request, response, next) => { // eslint-disable-line no-unused-vars
   logger.log(logger.ERROR, '__ERROR_MIDDLEWARE__');
   logger.log(logger.ERROR, error);
   // i know i have the property error.status

@@ -78,7 +78,7 @@ Account.create = (username, email, password) => {
   return bcrypt.hash(password, HASH_ROUNDS)// here starts SALT
     .then((passwordHash) => {
       // here we have password hash
-      password = null;
+      password = null;// eslint-disable-line 
       const tokenSeed = crypto.randomBytes(TOKEN_SEED_LENGTH).toString('hex');// hex is used bc of http
       return new Account({
         username,

@@ -36,5 +36,3 @@ export default(request, response, next) => {
     .catch(next);
 };
 
-// hook up stuff in account.js
-

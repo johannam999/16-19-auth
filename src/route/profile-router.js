@@ -1,8 +1,7 @@
-
 'use strict';
 
 import { json } from 'body-parser';
-import { Router } from 'express'; // Vinicio - interview keywords : de-structuring and module
+import { Router } from 'express';
 import HttpError from 'http-errors';
 import Profile from '../model/profile';
 import bearerAuthMiddleware from '../lib/bearer-auth-middleware';
@@ -28,7 +27,7 @@ profileRouter.post('/profiles', bearerAuthMiddleware, jsonParser, (request, resp
     .catch(next);
 });
 
-profileRouter.get('/profiles/:id', bearerAuthMiddleware, (request, response, next) => {
+profileRouter.get('/profiles/:id', (request, response, next) => {
   if (!request.params.id) {
     logger.log(logger.INFO, 'GET - responding with 400 status code - no id provided');
     return next(new HttpError(400, 'GET - invalid request'));
@@ -39,7 +38,8 @@ profileRouter.get('/profiles/:id', bearerAuthMiddleware, (request, response, nex
         logger.log(logger.INFO, 'GET - responding with a 404 status code - no id');
         return next(new HttpError(404, 'AUTH - bad id'));
       }
-      logger.log(logger.INFO, 'Returning 200 and a  profile'); return response.json(profile);
+      logger.log(logger.INFO, 'Returning 200 and a  profile'); 
+      return response.json(profile);
     })
     .catch(next);
 });
