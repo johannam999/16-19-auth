@@ -6,7 +6,7 @@ import HttpError from 'http-errors';
 import bearerAuthMiddleWare from '../lib/bearer-auth-middleware';
 import Picture from '../model/picture';
 import { s3Upload, s3Remove } from '../lib/s3';
-// import { pCreatePictureMock } from '../__test__/lib/picture-mock';
+//import { pCreatePictureMock } from '../__test__/lib/picture-mock';
 
 const multerUpload = multer({ dest: `${__dirname}/../temp` });
  
@@ -37,7 +37,7 @@ pictureRouter.post('/pictures', bearerAuthMiddleWare, multerUpload.any(), (reque
 
 pictureRouter.get('/pictures/:id', bearerAuthMiddleWare, (request, response, next) => {
   if (!request.params.id) {
-    return next(new HttpError(404, 'PICTURE ROUTER _ERROR_, invalid request'));
+    return next(new HttpError(400, 'PICTURE ROUTER _ERROR_, invalid request'));
   }
   return Picture.findById(request.params.id)
     .then((picture) => {
@@ -48,6 +48,16 @@ pictureRouter.get('/pictures/:id', bearerAuthMiddleWare, (request, response, nex
     })
     .catch(next);
 });
-  
+
+pictureRouter.delete('/pictures/:id', bearerAuthMiddleWare, (request, response, next) => {
+  return Picture.findByIdAndRemove(request.params.id)
+    .then((picture) => {
+      return s3Remove(picture.url);
+    })
+    .then(() => {
+      return response.sendStatus(204);
+    })
+    .catch(next);
+});
 
 export default pictureRouter;

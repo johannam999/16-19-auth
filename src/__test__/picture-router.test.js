@@ -65,7 +65,7 @@ describe('TESTING ROUTES at /pictures', () => {
       return pCreatePictureMock()
         .then((picture) => {
           picTest = picture;
-          return superagent.get(`${apiURL}/pictures/${picture.picture}`)
+          return superagent.get(`${apiURL}/pictures/${picture.picture._id}`)
             .set('Authorization', `Bearer ${picture.accountMock.token}`);
         })
         .then((response) => {
@@ -88,15 +88,45 @@ describe('TESTING ROUTES at /pictures', () => {
         });
     });
 
-    test('GET /pictures should return a 400 status code for missing token', () => {
+    test('GET /pictures should return a 404 status code for missing token', () => {
       return pCreatePictureMock()
-        .then(() => {
-          return superagent.post(`${apiURL}/pictures/:id`)
+        .then((picture) => {
+          return superagent.post(`${apiURL}/pictures/${picture.picture._id}`)
             .set('Authorization', 'Bearer ');
         })
         .then(Promise.reject)
         .catch((err) => {
           expect(err.status).toEqual(404);
+        });
+    });
+  });
+  describe('DELETE', () => {
+    test('DEL /pictures/:id should respond with 204 if delete completed', () => {
+      return pCreatePictureMock()
+        .then((pictureMock) => {
+          return superagent.delete(`${apiURL}/pictures/${pictureMock.picture._id}`)
+            .set('Authorization', `Bearer ${pictureMock.accountMock.token}`);
+        })
+        .then((response) => {
+          expect(response.status).toEqual(204);
+        });
+    });
+    test('DEL /pictures/:id should respond with 404 if no picture exists', () => {
+      return superagent.delete(`${apiURL}/pictures/wrongId`)
+        .then(Promise.reject)
+        .catch((error) => {
+          expect(error.status).toEqual(404);
+        });
+    });
+    test('DEL /pictures/:id should respond with 401 if bad token', () => {
+      return pCreatePictureMock()
+        .then((pictureMock) => {
+          return superagent.delete(`${apiURL}/pictures/${pictureMock.picture._id}`)
+            .set('Authorization', 'Bearer ');
+        })
+        .then(Promise.reject)
+        .catch((error) => {
+          expect(error.status).toEqual(401);
         });
     });
   });
