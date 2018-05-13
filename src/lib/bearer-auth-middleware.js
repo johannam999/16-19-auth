@@ -33,7 +33,7 @@ export default (request, response, next) => {
   return promisify(jsonWebToken.verify)(token, process.env.PICS_SECRET_PASS) 
   // here is token and secret, token and process... are callback(... args)
     .catch((error) => {
-      return Promise.reject(new HttpError(400, `AUTH - jsonwebtoken Error ${error}`));// we got incorrect token
+      return Promise.reject(new HttpError(400, `AUTH - jsonwebtoken Error ${error}`));
     }) // if theres a problem in the promisify we can have catch
     .then((decryptedToken) => {
       return Account.findOne({ tokenSeed: decryptedToken.tokenSeed }); // we are getting token seed
